@@ -7,8 +7,13 @@
     <title>Cliente</title>
     <link rel="shortcut icon" href="Logos\luz.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 <body>
+
+
+<?php include_once "sessao_login.php"?>
+
     <main class="conteiner">
         <div class="row justify-content-center borda">
             <div class="col-md-12 col-lg-10">
@@ -21,7 +26,7 @@
                     </div>
                     <hr>
 
-                    <?php include_once "mesagemProduto.php";?>
+                    <?php include_once "mensagemProduto.php";?>
                     
                     <div class="row justify-content-center borda">
                         <div class="cal-md-12 col-lg-10">
@@ -46,7 +51,7 @@
                                     <div class="col-4">
                                         <div class="form-group mb-3">
                                             <label class="label">Quantidade</label>
-                                            <input placeholder="" name="prod_quant" class="form-control">
+                                            <input placeholder="" name="prod_quant" class="form-control" type="number" min="0">
                                         </div>
                                     </div>
                                     <div class="col-4">
@@ -58,7 +63,7 @@
                                     <div class="col-4">
                                         <div class="form-group mb-3">
                                             <label class="label">Preço de venda</label>
-                                            <input placeholder="" name="prod_precovenda" class="form-control">
+                                            <input placeholder="" name="prod_precovenda" class="form-control" <?php echo "R$ " . number_format($prod_precovenda, 2, ',', '.');?>>
                                         </div>
                                     </div>
                                 </div>

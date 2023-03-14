@@ -16,6 +16,6 @@ if($dados->num_rows > 0){
     $_SESSION["cli_cpf"] = $cli_cpf;
     header("location:index.php");
 }else{
-    header("location:login.php?msg=mesagemUsuario");
+    header("location:login.php?msg=mensagemUsuario");
 }
 ?>

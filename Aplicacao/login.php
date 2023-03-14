@@ -17,9 +17,11 @@
                 <form action="login-validar.php" method="post">
                     <div class="row">
                         <div class="col text-center mt-3">
+                        <img  src="imagem/EkePreto.png" />
                         <hr>
                             <h1>Usuário</h1>
-                            <input id="cli_cpf" class="form-control" placeholder="Digite seu CFP" name="cli_cpf" required>
+                            <?php include_once "mensagemUsuario.php";?>
+                            <input id="cli_cpf" class="form-control" placeholder="Digite seu CFP" name="cli_cpf" maxlength="14" onkeyup="handleCpf(this)" required>
                         </div>
                     </div>
                     <div class="row">
@@ -36,7 +38,7 @@
             </div>
         </div>
     </main>
-
+    <script src="cpf.js"></script>
 </body>
 </html>
 

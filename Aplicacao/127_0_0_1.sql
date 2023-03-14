@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11-Mar-2023 às 02:15
+-- Tempo de geração: 14-Mar-2023 às 01:47
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -39,17 +39,17 @@ CREATE TABLE `cad_cliente` (
   `cli_estado` varchar(50) NOT NULL,
   `cli_email` varchar(150) NOT NULL,
   `cli_telefone` int(11) NOT NULL,
-  `cli_senha` int(11) NOT NULL
+  `cli_senha` varchar(100) NOT NULL,
+  `cli_foto` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `cad_cliente`
 --
 
-INSERT INTO `cad_cliente` (`cli_cpf`, `cli_nome`, `cli_endereco`, `cli_numero`, `cli_bairro`, `cli_cidade`, `cli_estado`, `cli_email`, `cli_telefone`, `cli_senha`) VALUES
-(123, 'Emerson', 'Rua da Igualdade', 239, 'Jardim da Paz', 'Americana', 'São Paulo', 'emerson@hotmail.com', 2147483647, 123),
-(1234, 'kadu', 'Rua da Igualdade', 239, 'Jardim da Paz', 'Americana', 'Paraná', 'emerson@hotmail.com', 2147483647, 123),
-(12345, 'Eduardo ', 'Rua da Igualdade', 239, 'Jardim da Paz', 'Americana', 'São Paulo', 'emerson@hotmail.com', 2147483647, 123);
+INSERT INTO `cad_cliente` (`cli_cpf`, `cli_nome`, `cli_endereco`, `cli_numero`, `cli_bairro`, `cli_cidade`, `cli_estado`, `cli_email`, `cli_telefone`, `cli_senha`, `cli_foto`) VALUES
+(123456789, 'Emerson', 'Rua da Igualdade', 239, 'Jardim da Paz', 'Americana', 'Santa Catarina', 'emerson@hotmail.com', 2147483647, '202cb962ac59075b964b07152d234b70', ''),
+(123, 'Emerson', '', 239, 'Jardim da Paz', 'Americana', 'São Paulo', 'emerson@hotmail.com', 2147483647, 'd41d8cd98f00b204e9800998ecf8427e', '1678750907.jpg');
 
 -- --------------------------------------------------------
 

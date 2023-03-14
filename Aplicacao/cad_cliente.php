@@ -8,6 +8,9 @@
     <link rel="shortcut icon" href="Logos\luz.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
+
+<?php include_once "sessao_login.php"?>
+
 <body>
     <main class="conteiner">
         <div class="row justify-content-center borda">
@@ -21,18 +24,18 @@
                     </div>
                     <hr>
                     
-                    <?php include_once "mesagemCadastro.php";?>
+                    <?php include_once "mensagemCadastro.php";?>
                     
                     <div class="row justify-content-center borda">
                         <div class="cal-md-12 col-lg-10">
                             <div class="row align-items-center">
 
-                            <form action="cad_cliente-inserir.php" method="post">
+                            <form action="cad_cliente-inserir.php" method="post" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-2">
                                         <div class="form-group mb-3">
                                             <label class="label">CPF</label>
-                                            <input placeholder="CPF" name="cli_cpf" class="form-control" required>
+                                            <input placeholder="CPF" name="cli_cpf" class="form-control" maxlength="14" onkeyup="handleCpf(this)" required>
                                         </div>
                                     </div>
                                     <div class="col-10">
@@ -91,7 +94,7 @@
                                     <div class="col-3">
                                         <div class="form-group mb-3">
                                             <label class="label">Telefone</label>
-                                            <input type="tel" maxlength="14" name="cli_telefone" class="form-control">
+                                            <input type="tel" maxlength="14" name="cli_telefone" class="form-control" onkeyup="handlePhone(this)">
                                         </div>
                                     </div>
                                     <div class="col-3">
@@ -100,6 +103,14 @@
                                             <input type="password" name="cli_senha" class="form-control">
                                         </div>
                                     </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div  class="form-group mb-3">
+                                            <label class="label">Selecione o arquivo:</label>
+                                            <input type="file" name="cli_foto" class="btn btn-dark ms-2" class="form-control"> 
+                                        </div>    
+                                    </div>                   
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
@@ -115,5 +126,7 @@
             </div>
         </div>
     </main>
+    <script src="cpf.js"></script>
+    <script src="telefone.js"></script>
 </body>
 </html>
