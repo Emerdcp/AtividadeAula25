@@ -32,7 +32,37 @@
                             <div class="row align-items-center">
 
                             <form>
-                                
+
+                            <div class="card">
+                                <div class="card-body p-5">
+                                    <ul class="list-group mb-0">
+                                        
+                                        <?php
+                                        include "conexao.php";
+                                                                            
+                                        $sqlBuscaClientes = "SELECT * FROM cad_cliente";
+                                        
+                                        $todasClientes = mysqli_query($conexao, $sqlBuscaClientes);
+                                        while ($clientes = mysqli_fetch_assoc($todasClientes)) {
+                                        ?>
+                                        <li class="list-group-item d-flex align-items-center border-0 mb-2 rounded fundo-cinza justify-content-between">
+                                            <div class="col-3"> CPF: 
+                                                <?php echo $clientes['cli_cpf']; ?>
+                                            </div>
+                                            <div class="col-5"> Nome: 
+                                                <?php echo $clientes['cli_nome']; ?>
+                                            </div>
+                                            <div class="col-4"> E-mail: 
+                                                <?php echo $clientes['cli_email']; ?>
+                                            </div>
+                                        </li>
+
+                                        <?php
+                                            }
+                                            mysqli_close($conexao);
+                                        ?>
+                                    </ul>
+                                </div>
                             </form>
                        </div>
                     </div>

@@ -1,6 +1,6 @@
 <?php 
-$server = '127.0.0.1:3312';
-//$server = '127.0.0.1';
+//$server = '127.0.0.1:3312';
+$server = '127.0.0.1';
 $db = 'aplicacao';
 $user = 'root';
 $pass = '';

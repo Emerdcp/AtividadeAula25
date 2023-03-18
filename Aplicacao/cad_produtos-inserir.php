@@ -8,10 +8,13 @@ $prod_precovenda = $_POST['prod_precovenda'];
 
 include_once "conexao.php";
 
+$prod_precocompra = str_replace('.','',$prod_precocompra);
 $prod_precocompra = str_replace(',','.',$prod_precocompra);
-$prod_precovenda = str_replace([','],'.', $prod_precovenda);
 
+//echo ($prod_precocompra);
+//exit();
 
+//$prod_precovenda = str_replace([','],'.', $prod_precovenda);
 
 $sqlGravarProd = "insert into cad_produtos(prod_nome, prod_categoria, prod_quant, prod_precocompra, prod_precovenda) 
                 values ('$prod_nome', '$prod_categoria', $prod_quant, $prod_precocompra, $prod_precovenda)";

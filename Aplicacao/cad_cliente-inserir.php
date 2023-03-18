@@ -26,7 +26,7 @@ move_uploaded_file($_FILES["cli_foto"]["tmp_name"],$pastaCliente . $nomeNovoClie
 $cli_senha = md5($cli_senha);
 
 $sqlGravarCli = "insert into cad_cliente(cli_cpf, cli_nome, cli_endereco, cli_numero, cli_bairro, cli_cidade, cli_estado, cli_email, cli_telefone, cli_senha, cli_foto) 
-                values ($cli_cpf, '$cli_nome', '$cli_endereco', $cli_numero, '$cli_bairro', '$cli_cidade', '$cli_estado', '$cli_email', $cli_telefone, '$cli_senha', '$nomeNovoCliente')";
+                values ('$cli_cpf', '$cli_nome', '$cli_endereco', $cli_numero, '$cli_bairro', '$cli_cidade', '$cli_estado', '$cli_email', '$cli_telefone', '$cli_senha', '$nomeNovoCliente')";
 
 //echo ($sqlGravarCli);
 //exit();

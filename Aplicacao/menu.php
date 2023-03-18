@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand me-2" href="https://mdbgo.com/">
+    <a class="navbar-brand me-2" href="index.php">
       <img
         src="imagem/EkePreto.png"
         height="40"
@@ -38,11 +38,11 @@
 
       <div class="d-flex align-items-center">
         <img 
-            src="imagem/";
+            src="imagem/<?php echo $_SESSION["cli_foto"]; ?>";
             height="40";
             class="rounded-circle";
         />
-        <a href="logout.php"> <?php echo $_SESSION["cli_cpf"]; ?> [ Sair ]</a>
+        <a href="logout.php"> <?php echo $_SESSION["cli_nome"]; ?> [ Sair ]</a>
       </div>
     </div>
   </div>

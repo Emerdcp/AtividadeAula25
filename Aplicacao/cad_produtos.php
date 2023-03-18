@@ -57,13 +57,13 @@
                                     <div class="col-4">
                                         <div class="form-group mb-3">
                                             <label class="label">Preço de compra</label>
-                                            <input placeholder="" name="prod_precocompra" class="form-control">
+                                            <input placeholder="" name="prod_precocompra" class="form-control" id="preco-compra">
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="form-group mb-3">
                                             <label class="label">Preço de venda</label>
-                                            <input placeholder="" name="prod_precovenda" class="form-control" <?php echo "R$ " . number_format($prod_precovenda, 2, ',', '.');?>>
+                                            <input placeholder="" name="prod_precovenda" class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -81,5 +81,9 @@
             </div>
         </div>
     </main>
+    <script src="jquery.js"></script>
+    <script src="jquery.inputmask.js"></script>
+    <!-- <script src="jquery.mask.js"></script> -->
+    <script src="valor.js"></script>
 </body>
 </html>

@@ -12,8 +12,19 @@ $dados = mysqli_query($conexao, $sqlSenha);
 
 
 if($dados->num_rows > 0){
+
+  while ($AcessoClientes = mysqli_fetch_assoc($dados)) {
+    $cli_cpf = $AcessoClientes['cli_cpf'];
+    $cli_nome = $AcessoClientes['cli_nome'];
+    $cli_foto = $AcessoClientes['cli_foto'];
+  }  
+
+  //echo ($AcessoClientes);
+  //exit();
+
     session_start();
-    $_SESSION["cli_cpf"] = $cli_cpf;
+    $_SESSION["cli_nome"] = $cli_nome;
+    $_SESSION["cli_foto"] = $cli_foto;
     header("location:index.php");
 }else{
     header("location:login.php?msg=mensagemUsuario");
